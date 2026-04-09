@@ -13,6 +13,7 @@ const API_URL = "https://reality-check-mcp-8eqi.onrender.com/api";
 export default function Home() {
   const [idea, setIdea] = useState("");
   const [loadingAction, setLoadingAction] = useState<string | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [resultData, setResultData] = useState<any>(null);
   const [activeMode, setActiveMode] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
@@ -180,7 +181,7 @@ export default function Home() {
                 <Flame className="w-32 h-32 text-orange-500" />
               </div>
               <p className="text-xl text-gray-200 leading-relaxed relative z-10 italic">
-                "{resultData.roast}"
+                &quot;{resultData.roast}&quot;
               </p>
             </div>
           </div>
